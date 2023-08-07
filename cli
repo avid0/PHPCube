@@ -1,0 +1,23 @@
+#!php
+<?php
+
+// Check if an argument is provided
+if($argc < 2) {
+    echo "Usage: php cli [filename]\n";
+    echo "Description: PHPCube cli compiler takes a filename as an argument.\n";
+    echo "Arguments:\n";
+    echo "  [filename] - The name of the file to process.\n";
+    exit;
+}
+
+require "vendor/autoload.php";
+
+$compiler = PHPCube\Script::file($argv[1]);
+if(!$compiler){
+    print "filename is unavailable!\n";
+    exit;
+}
+$compiler->compile();
+eval($compiler->evalable());
+
+?>

@@ -1,0 +1,4 @@
+
+# PHP Cube
+RewriteEngine On
+RewriteRule (.+)\.cube\.php$ public/index.php [L]

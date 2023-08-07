@@ -1,0 +1,24 @@
+{
+    "name": "avid0/phpcube",
+    "description": "New php syntax",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Avid",
+            "email": "avid.github@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "PHPCube\\": "src/"
+        },
+        "files": [
+            "src/helper.php"
+        ]
+    },
+    "require": {
+        "revolt/event-loop": "^1.0",
+        "amphp/amp": "^3.0"
+    }
+}
